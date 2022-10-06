@@ -260,43 +260,7 @@ void print_backwards(struct DNode *tail) {
   return;
 }
 
-void test(struct Node *beg) {
-  append(beg, 5);
-  print_list(beg);
 
-  beg = prepend(beg, 41);
-  print_list(beg);
-
-  reverse_list(&beg);
-  print_list(beg);
-
-  beg = add_by_index(beg, 4, 1337);
-  print_list(beg);
-
-  beg = remove_by_index(beg, 3);
-  print_list(beg);
-
-  sort_list(beg);
-  print_list(beg);
-
-  struct Node *temp = (struct Node *)search_val(beg, 41);
-  print_list(beg);
-
-  struct Node *new_list = (struct Node *)malloc(sizeof(struct Node));
-  new_list->Value = 16;
-
-  append(new_list, 13);
-  append(new_list, 228);
-  append(new_list, 0);
-
-  beg = merge_lists(beg, new_list);
-  print_list(beg);
-
-  struct DNode *beg_dnode = (struct DNode *)traverse_backwards(beg);
-  print_backwards(beg_dnode);
-
-  return;
-}
 
 void print_help_message() {
   printf("\n1 - Append\n"
